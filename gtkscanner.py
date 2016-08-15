@@ -1,3 +1,6 @@
+#    Ghost5egy MacSpoofer Coded by Ghost5egy
+#	 it's the simple way to spoof any pc in your network 
+#    first release at : 15 - 8 - 2016
 import gtk
 import pango
 import nmap
@@ -144,7 +147,7 @@ class mywindow(gtk.Window):
 				print model.get_value(selrow,1)
 				print model.get_value(selrow,2)
 				tmac = model.get_value(selrow,2)
-				self.changemac()
+				self.changemac(widget)
 			else:
 				self.statelbl.set_text("You must select any other device not your gateway")
 				print "You must select any other device not your gateway"
@@ -195,52 +198,51 @@ class mywindow(gtk.Window):
 		
 		self.statelbl.set_text("Press Use this")
 	
-	def changemac(self):
+	def changemac(self, widget):
 		global tmac
+		print "change mac"
 		try:
 			root_or_admin = os.geteuid() == 0
 		except AttributeError:
 			root_or_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
 		
-		else:
-			spoofer = None
+		spoofer = None
 
-			try:
-				spoofer = get_os_spoofer()
-			except NotImplementedError:
-				return UNSUPPORTED_PLATFORM
-			result = find_interface(self.entry.entry.get_text())
-			if result is None:
-				print('- couldn\'t find the device for {target}'.format(
-					target=target
-				))
-				self.statelbl.set_text("Couldn't find device ")
-				return INVALID_TARGET
-				
-			port, device, address, current_address = result			
-			target_mac = tmac
-			if int(target_mac[1], 16) % 2:
-				self.label3.set_text("It's Multicast Address")
-				print('Warning: The address you supplied is a multicast address and thus can not be used as a host address.')
+		try:
+			spoofer = get_os_spoofer()
+		except NotImplementedError:
+			return UNSUPPORTED_PLATFORM
+		result = find_interface(self.entry.entry.get_text())
+		if result is None:
+			print('- couldn\'t find the device for {target}'.format(
+				target=target
+			))
+			self.statelbl.set_text("Couldn't find device ")
+			return INVALID_TARGET
 			
-			if not MAC_ADDRESS_R.match(target_mac):
-				print('- {mac} is not a valid MAC address'.format(
-					mac=target_mac
-				))
-				return INVALID_MAC_ADDR
-
-			if not root_or_admin:
-				if sys.platform == 'win32':
-					print('Error: Must run this with administrative privileges to set MAC addresses')
-					self.statelbl.set_text("You Need to run as admin")
-					return NON_ROOT_USER
-				else:
-					print('Error: Must run this as root (or with sudo) to set MAC addresses')
-					self.statelbl.set_text("You Need to run as root")
-					return NON_ROOT_USER
-			asd = set_interface_mac(device, target_mac, port)
-			self.statelbl.set_text("Mac Spoofed")
-			self.getifinfo()
+		port, device, address, current_address = result			
+		target_mac = tmac
+		if int(target_mac[1], 16) % 2:
+			self.statelbl.set_text("It's Multicast Address")
+			print('Warning: The address you supplied is a multicast address and thus can not be used as a host address.')
+		
+		if not MAC_ADDRESS_R.match(target_mac):
+			print('- {mac} is not a valid MAC address'.format(
+				mac=target_mac
+			))
+			return INVALID_MAC_ADDR
+		if not root_or_admin:
+			if sys.platform == 'win32':
+				print('Error: Must run this with administrative privileges to set MAC addresses')
+				self.statelbl.set_text("You Need to run as admin")
+				return NON_ROOT_USER
+			else:
+				print('Error: Must run this as root (or with sudo) to set MAC addresses')
+				self.statelbl.set_text("You Need to run as root")
+				return NON_ROOT_USER
+		asd = set_interface_mac(device, target_mac, port)
+		self.statelbl.set_text("Mac Spoofed")
+		self.getifinfo(widget)
 			
 get_intterfaces()
 win = mywindow()
