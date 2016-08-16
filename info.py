@@ -3,6 +3,34 @@ import subprocess
 import sys
 import os.path
 
+def checkcon():
+	if sys.platform == 'win32':
+		parme = "www.google.com"
+	else:
+		parme = "-c 4 www.google.com"
+	
+	res = subprocess.check_output(["ping", parme], stderr=subprocess.STDOUT)
+	res.decode('ascii')
+	m = re.search("Reply from", res)
+	if hasattr(m, "group") and m.group(0) != None:
+		return True
+	else:
+		return False
+
+def getintspeed():
+	res = subprocess.check_output(["python", "speedtest_cli.py"], stderr=subprocess.STDOUT)
+	res.decode('ascii')
+	inttest = []
+	# extract description then strip out value
+	m = re.search("(?<=Download: )(.*)", res)
+	if hasattr(m, "group") and m.group(0) != None:
+		inttest.append(m.group(0))
+	m = re.search("(?<=Upload: )(.*)", res)
+	if hasattr(m, "group") and m.group(0) != None:
+		inttest.append(m.group(0))
+	
+	return inttest
+
 def nix_getipormask(deinfo, res):
   if deinfo == "inet addr":
     sstr = deinfo+":[0-9](.*) B"

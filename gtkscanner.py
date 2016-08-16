@@ -6,9 +6,8 @@ import pango
 import nmap
 import sys
 import os.path
+import time
 from info import *
-from spoofmac.version import __version__
-from spoofmac.util import random_mac_address, MAC_ADDRESS_R, normalize_mac_address
 
 from spoofmac.version import __version__
 from spoofmac.util import random_mac_address, MAC_ADDRESS_R, normalize_mac_address
@@ -102,6 +101,8 @@ class mywindow(gtk.Window):
 		self.table.add(self.treeview)
 		self.statelbl = gtk.Label("Choose Network Card")
 		self.thirdbox.pack_start(self.statelbl,True,True,5)
+		self.intsplbl = gtk.Label("")
+		self.thirdbox.pack_start(self.intsplbl,True,True,5)
 		
 	def on_sbtn_click(self, widget):
 		global nmask
@@ -241,9 +242,16 @@ class mywindow(gtk.Window):
 				self.statelbl.set_text("You Need to run as root")
 				return NON_ROOT_USER
 		asd = set_interface_mac(device, target_mac, port)
+		time.sleep(10)
 		self.statelbl.set_text("Mac Spoofed")
+		print "Mac Spoofed"
 		self.getifinfo(widget)
-			
+		if checkcon():
+			intsp = getintspeed()
+			self.intsplbl.set_text("Download rate :"+intsp[0]+"Upload rate :"+intsp[1])
+		else:
+			self.intsplbl.set_text("No Internet Connection")
+		
 get_intterfaces()
 win = mywindow()
 win.set_title("Ghost5egy MacSpoofer")
