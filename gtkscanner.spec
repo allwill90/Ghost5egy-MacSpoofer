@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['gtkscanner.pyw'],
+a = Analysis(['gtkscanner.py'],
              pathex=['D:\\macchanger\\Ghost5egy MacSpoofer'],
              binaries=None,
              datas=None,

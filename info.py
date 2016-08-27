@@ -1,7 +1,17 @@
 import re
 import subprocess
 import sys
+import os
 import os.path
+
+def reqadminwin():
+	import win32com.shell.shell as shell
+	ASADMIN = 'asadmin'
+
+	if sys.argv[-1] != ASADMIN:
+		script = os.path.abspath(sys.argv[0])
+		params = ' '.join([script] + sys.argv[1:] + [ASADMIN])
+		shell.ShellExecuteEx(lpVerb='runas', lpFile=sys.executable, lpParameters=params)
 
 def checkcon():
 	if sys.platform == 'win32':

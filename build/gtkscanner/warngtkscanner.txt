@@ -1,43 +1,13 @@
-missing module named __builtin__.open - imported by __builtin__, tarfile
-missing module named unicodedata.ucd_3_2_0 - imported by unicodedata, stringprep, encodings.idna
-missing module named _sre.MAXREPEAT - imported by _sre, sre_constants
-missing module named _warnings.warn_explicit - imported by _warnings, warnings
-missing module named _warnings.filters - imported by _warnings, warnings
-missing module named _warnings.once_registry - imported by _warnings, warnings
-missing module named _warnings.default_action - imported by _warnings, warnings
-missing module named _warnings.warn - imported by _warnings, warnings
-missing module named _subprocess.STD_OUTPUT_HANDLE - imported by _subprocess, subprocess
-missing module named _subprocess.CREATE_NEW_PROCESS_GROUP - imported by _subprocess, subprocess
-missing module named _subprocess.STD_INPUT_HANDLE - imported by _subprocess, subprocess
-missing module named _subprocess.STARTF_USESHOWWINDOW - imported by _subprocess, subprocess
-missing module named _subprocess.CREATE_NEW_CONSOLE - imported by _subprocess, subprocess
-missing module named _subprocess.STD_ERROR_HANDLE - imported by _subprocess, subprocess
-missing module named _subprocess.STARTF_USESTDHANDLES - imported by _subprocess, subprocess
-missing module named _subprocess.SW_HIDE - imported by _subprocess, subprocess
-missing module named collections.namedtuple - imported by collections, inspect, unittest.util, difflib, doctest, ssl, urlparse
-missing module named cPickle.loads - imported by cPickle, collections
-missing module named cPickle.dumps - imported by cPickle, collections
-missing module named cPickle.PicklingError - imported by cPickle, multiprocessing.managers
-missing module named thread.get_ident - imported by thread, collections
-missing module named thread._local - imported by thread, threading
-missing module named thread.stack_size - imported by thread, threading
-missing module named thread.allocate_lock - imported by thread, _strptime
-missing module named itertools.imap - imported by itertools, heapq, collections
-missing module named itertools.chain - imported by itertools, heapq, tokenize, collections
-missing module named itertools.starmap - imported by itertools, collections
-missing module named itertools.repeat - imported by itertools, collections
-missing module named itertools.tee - imported by itertools, heapq
-missing module named itertools.izip - imported by itertools, heapq
-missing module named itertools.count - imported by itertools, heapq, threading
+missing module named sys.exc_info - imported by sys, win32com.server.dispatcher
+missing module named struct.calcsize - imported by struct, ctypes
+missing module named _struct.__doc__ - imported by _struct, struct
+missing module named _struct._clearcache - imported by _struct, struct
+missing module named _hashlib.pbkdf2_hmac - imported by _hashlib, hashlib
+missing module named copy.deepcopy - imported by copy, weakref
 missing module named itertools.islice - imported by itertools, repr, heapq
-missing module named collections.deque - imported by collections, shlex, threading, Queue
-missing module named collections.OrderedDict - imported by collections, unittest.util
-missing module named operator.itemgetter - imported by operator, collections, heapq
-missing module named operator.eq - imported by operator, collections
-missing module named operator._compare_digest - imported by operator, hmac
-missing module named operator.attrgetter - imported by operator, inspect
-missing module named _collections.deque - imported by _collections, collections
-missing module named _collections.defaultdict - imported by _collections, collections
+missing module named org.PyStringMap - imported by org, copy
+missing module named org - imported by copy
+missing module named exceptions.ReferenceError - imported by exceptions, weakref
 missing module named _weakref.ref - imported by _weakref, _weakrefset, weakref
 missing module named _weakref.ReferenceType - imported by _weakref, weakref
 missing module named _weakref.proxy - imported by _weakref, weakref
@@ -45,10 +15,15 @@ missing module named _weakref.getweakrefs - imported by _weakref, weakref
 missing module named _weakref.getweakrefcount - imported by _weakref, weakref
 missing module named _weakref.ProxyType - imported by _weakref, weakref
 missing module named _weakref.CallableProxyType - imported by _weakref, weakref
-missing module named _hashlib.pbkdf2_hmac - imported by _hashlib, hashlib
-missing module named copy.deepcopy - imported by copy, weakref
-missing module named exceptions.ReferenceError - imported by exceptions, weakref
+missing module named cStringIO.StringIO - imported by cStringIO, pprint, shlex, tempfile, pickle, gettext, csv, tarfile, socket, quopri, httplib, email.parser, email.message, email.generator, email.iterators, urllib, plistlib, xml.sax, encodings.uu_codec, encodings.quopri_codec
 missing module named binascii.hexlify - imported by binascii, random
+missing module named binascii.a2b_uu - imported by binascii, encodings.uu_codec
+missing module named binascii.b2a_uu - imported by binascii, encodings.uu_codec
+missing module named binascii.b2a_base64 - imported by binascii, email.base64mime
+missing module named binascii.a2b_base64 - imported by binascii, email.base64mime
+missing module named binascii.b2a_qp - imported by binascii, quopri
+missing module named binascii.a2b_qp - imported by binascii, quopri
+missing module named os.urandom - imported by os, random
 missing module named math.sin - imported by math, random
 missing module named math.sqrt - imported by math, random
 missing module named math.cos - imported by math, random
@@ -58,6 +33,55 @@ missing module named math.exp - imported by math, random
 missing module named math.log - imported by math, random
 missing module named math.e - imported by math, random
 missing module named math.pi - imported by math, random
+missing module named threading.RLock - imported by threading, _threading_local, multiprocessing.dummy
+missing module named threading.current_thread - imported by threading, _threading_local
+missing module named thread._local - imported by thread, threading
+missing module named thread.stack_size - imported by thread, threading
+missing module named time.time - imported by time, threading, Queue, xmllib, multiprocessing.synchronize
+missing module named time.sleep - imported by time, threading, multiprocessing.synchronize
+missing module named itertools.count - imported by itertools, heapq, threading
+missing module named itertools.starmap - imported by itertools, collections
+missing module named itertools.repeat - imported by itertools, collections
+missing module named itertools.imap - imported by itertools, heapq, collections
+missing module named itertools.tee - imported by itertools, heapq
+missing module named itertools.izip - imported by itertools, heapq
+missing module named itertools.chain - imported by itertools, heapq, tokenize, collections
+missing module named collections.deque - imported by collections, shlex, threading, Queue
+missing module named errno.EINVAL - imported by errno, StringIO
+missing module named errno.ENOENT - imported by errno, gettext
+missing module named readline - imported by cmd, pdb
+missing module named pwd - imported by posixpath, shutil, tarfile, getpass
+missing module named pwd.getpwnam - imported by pwd, shutil
+missing module named strop.whitespace - imported by strop, string
+missing module named strop.maketrans - imported by strop, string
+missing module named strop.lowercase - imported by strop, string
+missing module named strop.uppercase - imported by strop, string
+missing module named _functools.partial - imported by _functools, functools
+missing module named _functools.reduce - imported by _functools, functools
+missing module named _sre.MAXREPEAT - imported by _sre, sre_constants
+missing module named array.array - imported by array, httplib
+missing module named re._compile - imported by re, sre
+missing module named re.__all__ - imported by re, sre
+missing module named operator.attrgetter - imported by operator, inspect
+missing module named cPickle.loads - imported by cPickle, collections
+missing module named cPickle.dumps - imported by cPickle, collections
+missing module named cPickle.PicklingError - imported by cPickle, multiprocessing.managers
+missing module named thread.get_ident - imported by thread, collections
+missing module named collections.OrderedDict - imported by collections, unittest.util
+missing module named collections.namedtuple - imported by collections, inspect, unittest.util, difflib, doctest, ssl, urlparse
+missing module named operator.itemgetter - imported by operator, collections, heapq
+missing module named operator.eq - imported by operator, collections
+missing module named operator._compare_digest - imported by operator, hmac
+missing module named _collections.deque - imported by _collections, collections
+missing module named _collections.defaultdict - imported by _collections, collections
+missing module named _warnings.warn_explicit - imported by _warnings, warnings
+missing module named _warnings.filters - imported by _warnings, warnings
+missing module named _warnings.once_registry - imported by _warnings, warnings
+missing module named _warnings.default_action - imported by _warnings, warnings
+missing module named _warnings.warn - imported by _warnings, warnings
+missing module named thread.allocate_lock - imported by thread, _strptime
+missing module named datetime.date - imported by datetime, _strptime
+missing module named pywintypes.TimeType - imported by pywintypes, win32com.client.build
 missing module named _io.DEFAULT_BUFFER_SIZE - imported by _io, io
 missing module named _io.BytesIO - imported by _io, io
 missing module named _io.open - imported by _io, io
@@ -71,30 +95,40 @@ missing module named _io.StringIO - imported by _io, io
 missing module named _io.BufferedRWPair - imported by _io, io
 missing module named _io.TextIOWrapper - imported by _io, io
 missing module named _io.UnsupportedOperation - imported by _io, io
-missing module named readline - imported by cmd, pdb
-missing module named _functools.partial - imported by _functools, functools
-missing module named _functools.reduce - imported by _functools, functools
-missing module named errno.ENOENT - imported by errno, gettext
-missing module named errno.EINVAL - imported by errno, StringIO
-missing module named cStringIO.StringIO - imported by cStringIO, pprint, shlex, tempfile, pickle, gettext, csv, tarfile, socket, quopri, httplib, email.parser, email.message, email.generator, email.iterators, urllib, plistlib, xml.sax, encodings.uu_codec, encodings.quopri_codec
-missing module named binascii.a2b_uu - imported by binascii, encodings.uu_codec
-missing module named binascii.b2a_uu - imported by binascii, encodings.uu_codec
-missing module named binascii.b2a_base64 - imported by binascii, email.base64mime
-missing module named binascii.a2b_base64 - imported by binascii, email.base64mime
-missing module named binascii.b2a_qp - imported by binascii, quopri
-missing module named binascii.a2b_qp - imported by binascii, quopri
+missing module named imp.reload - imported by imp, win32com.client.gencache
+missing module named pywintypes.IIDType - imported by pywintypes, win32com.client.dynamic
+missing module named win32com.client.Dispatch - imported by win32com.client, win32com.client.util, win32com.client.makepy
+missing module named win32com.client._get_good_object_ - imported by win32com.client, win32com.client.util
+missing module named pythoncom.DISPATCH_PROPERTYPUT - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_VALUE - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_COLLECT - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_UNKNOWN - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPATCH_PROPERTYGET - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_STARTENUM - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_PROPERTYPUT - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_EVALUATE - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_DESTRUCTOR - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPATCH_METHOD - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_CONSTRUCTOR - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPATCH_PROPERTYPUTREF - imported by pythoncom, win32com.server.policy
+missing module named pythoncom.DISPID_NEWENUM - imported by pythoncom, win32com.server.policy
+missing module named fcntl - imported by tempfile, subprocess
+missing module named _sysconfigdata.build_time_vars - imported by _sysconfigdata, distutils.sysconfig
+missing module named _sysconfigdata - imported by distutils.sysconfig
+missing module named __builtin__.open - imported by __builtin__, tarfile
+missing module named grp.getgrnam - imported by grp, shutil
+missing module named grp - imported by shutil, tarfile
+missing module named _subprocess.STD_OUTPUT_HANDLE - imported by _subprocess, subprocess
+missing module named _subprocess.CREATE_NEW_PROCESS_GROUP - imported by _subprocess, subprocess
+missing module named _subprocess.STD_INPUT_HANDLE - imported by _subprocess, subprocess
+missing module named _subprocess.STARTF_USESHOWWINDOW - imported by _subprocess, subprocess
+missing module named _subprocess.CREATE_NEW_CONSOLE - imported by _subprocess, subprocess
+missing module named _subprocess.STD_ERROR_HANDLE - imported by _subprocess, subprocess
+missing module named _subprocess.STARTF_USESTDHANDLES - imported by _subprocess, subprocess
+missing module named _subprocess.SW_HIDE - imported by _subprocess, subprocess
 missing module named 'org.python'.PyStringMap - imported by 'org.python', pickle
 missing module named 'org.python' - imported by pickle, xml.sax
 missing module named 'org.python'.imp - imported by 'org.python', xml.sax
-missing module named struct.calcsize - imported by struct, ctypes
-missing module named _struct.__doc__ - imported by _struct, struct
-missing module named _struct._clearcache - imported by _struct, struct
-missing module named fcntl - imported by tempfile, subprocess
-missing module named threading.RLock - imported by threading, _threading_local, multiprocessing.dummy
-missing module named threading.current_thread - imported by threading, _threading_local
-missing module named time.time - imported by time, threading, Queue, xmllib, multiprocessing.synchronize
-missing module named time.sleep - imported by time, threading, multiprocessing.synchronize
-missing module named os.urandom - imported by os, random
 missing module named riscosenviron._Environ - imported by riscosenviron, os
 missing module named riscosenviron - imported by os
 missing module named riscospath - imported by os
@@ -109,20 +143,10 @@ missing module named os2 - imported by os
 missing module named nt._isdir - imported by nt, ntpath
 missing module named nt._getfullpathname - imported by nt, ntpath
 missing module named nt._exit - imported by nt, os
-missing module named pwd - imported by posixpath, shutil, tarfile, getpass
-missing module named pwd.getpwnam - imported by pwd, shutil
 missing module named posix._exit - imported by posix, os
 missing module named posix - imported by os
 missing module named resource - imported by posix
-missing module named strop.whitespace - imported by strop, string
-missing module named strop.maketrans - imported by strop, string
-missing module named strop.lowercase - imported by strop, string
-missing module named strop.uppercase - imported by strop, string
-missing module named org.PyStringMap - imported by org, copy
-missing module named org - imported by copy
-missing module named array.array - imported by array, httplib
-missing module named re._compile - imported by re, sre
-missing module named re.__all__ - imported by re, sre
+missing module named unicodedata.ucd_3_2_0 - imported by unicodedata, stringprep, encodings.idna
 missing module named codecs.mbcs_encode - imported by codecs, encodings.mbcs
 missing module named codecs.mbcs_decode - imported by codecs, encodings.mbcs
 missing module named _winreg.OpenKeyEx - imported by _winreg, platform
@@ -147,7 +171,6 @@ missing module named _ssl.SSL_ERROR_WANT_WRITE - imported by _ssl, socket
 missing module named _ssl.RAND_add - imported by _ssl, ssl, socket
 missing module named _ssl.SSL_ERROR_SYSCALL - imported by _ssl, socket
 missing module named _ssl.SSLError - imported by _ssl, ssl, socket
-missing module named datetime.date - imported by datetime, _strptime
 missing module named time.strptime - imported by time, ssl
 missing module named _ssl.enum_crls - imported by _ssl, ssl
 missing module named _ssl.enum_certificates - imported by _ssl, ssl
@@ -267,10 +290,6 @@ missing module named multiprocessing.current_process - imported by multiprocessi
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
 missing module named multiprocessing.process.active_children - imported by multiprocessing.process, multiprocessing.util, multiprocessing
 missing module named multiprocessing.process.current_process - imported by multiprocessing.process, multiprocessing.util, multiprocessing, multiprocessing.synchronize
-missing module named _sysconfigdata.build_time_vars - imported by _sysconfigdata, distutils.sysconfig
-missing module named _sysconfigdata - imported by distutils.sysconfig
-missing module named grp.getgrnam - imported by grp, shutil
-missing module named grp - imported by shutil, tarfile
 missing module named ElementC14N._serialize_c14n - imported by ElementC14N, xml.etree.ElementTree
 missing module named ElementC14N - imported by xml.etree.ElementTree
 missing module named _csv.Dialect - imported by _csv, csv

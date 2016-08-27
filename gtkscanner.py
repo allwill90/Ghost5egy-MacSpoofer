@@ -244,7 +244,6 @@ class mywindow(gtk.Window):
 		asd = set_interface_mac(device, target_mac, port)
 		time.sleep(10)
 		self.statelbl.set_text("Mac Spoofed")
-		print "Mac Spoofed"
 		self.getifinfo(widget)
 		if checkcon():
 			intsp = getintspeed()
@@ -252,13 +251,8 @@ class mywindow(gtk.Window):
 		else:
 			self.intsplbl.set_text("No Internet Connection")
 
-#def hide():
-#   import win32console,win32gui
-#   window = win32console.GetConsoleWindow()
-#   win32gui.ShowWindow(window,0)
-#    return True
-
-#hide()	
+if sys.platform == 'win32':
+	reqadminwin()
 get_intterfaces()
 win = mywindow()
 win.set_title("Ghost5egy MacSpoofer")
